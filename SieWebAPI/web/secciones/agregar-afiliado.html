@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agregar Afiliado</title>
+  <link rel="stylesheet" href="../assets/dist/css/styles.css" media="screen" charset="utf-8">
+  <link rel="shortcut icon" href="../assets/dist/img/favicon.png" />
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row main-wrapper">
+
+      <header class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-dark justify-content-between">
+        <a href="#" class="hambuger-menu"><i class="large fa fa-2 fa-bars"></i></a>
+        <a href="home.html" class="navbar-brand sie-home"><span>Sie</span></a>
+
+        <div class="user-menu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <span class="username text-right">Pruebas</span>
+   </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="#">Notificaciones</a>
+            <a class="dropdown-item" href="#">Configuracion</a>
+            <div class="dropdown-divider"></div>
+            <a href="../index.html" class="dropdown-item button cerrar-sesion">
+   <i class="large fa fa-sign-out"></i>
+   <span>Cerrar sesion</span>
+   </a>
+          </div>
+        </div>
+
+      </header>
+
+      <aside class="sidebar col-sm-2 bg-dark d-none d-lg-block">
+        <nav class="main-menu">
+          <ul class="menu vertical">
+            <li>
+              <a href="#" class="parent">
+   <i class="large fa fa-user-circle"></i>
+   <span>Gestion de afiliados</span>
+   <i class="fa arrow float-right" aria-hidden="true"></i>
+   </a>
+              <ul class="submenu second-level collapse">
+                <li>
+                  <a href class="parent">Afiliados<i class="fa arrow float-right" aria-hidden="true"></i></a>
+                  <ul class="submenu third-level collapse">
+                    <li>
+                      <a href="afiliados.html" class="is-active">
+   <i class="large"></i>
+   <span>Todos los Afiliados</span>
+   </a>
+                    </li>
+                    <li>
+                      <a href="agregar-afiliado.html" class="is-active">
+   <i class="large"></i>
+   <span>Agregar Afiliados</span>
+   </a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content-wrapper offset-lg-2 col-lg-10">
+        <h1 class="title">Crear Afiliado</h1>
+
+      <form method="post" enctype="multipart/form-data" class="row">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        </div>
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="ZMKIUrlpamjskhmkOcNoCEHOwhr7dy4rmMM9TyWNKFYmXrHsPaJjj9FNHXrj7cIT">
+
+        <div class="form-group col-sm-2">
+          <label for="id_nombres">Nombres:</label>
+          <input class="form-control" id="id_nombres" maxlength="50" name="nombres" placeholder="Nombres" type="text" required="">
+
+            <small class="form-text text-muted">Nombres del afiliado, solo se admite texto</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_apellidos">Apellidos:</label>
+          <input class="form-control" id="id_apellidos" maxlength="50" name="apellidos" placeholder="Apellidos" type="text" required="">
+
+            <small class="form-text text-muted">Apellidos del afiliado, solo se admite texto</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_identificacion">Identificacion:</label>
+          <input class="form-control" id="id_identificacion" maxlength="50" name="identificacion" placeholder="Identificacion" type="number" required="">
+
+            <small class="form-text text-muted"># de identificacion del afiliado, solo se admiten numeros</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_fecha_nacimiento">Fecha de nacimiento:</label>
+          <input class="form-control" id="id_fecha_nacimiento" name="fecha_nacimiento" placeholder="ej: 1999-05-21" type="date" required="">
+
+            <small class="form-text text-muted">Fecha de nacimiento del afiliado, dd/mm/aa</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_telefono">Telefono o Celular:</label>
+          <input class="form-control" id="id_telefono" name="telefono" placeholder="Telefono" type="number" required="">
+
+            <small class="form-text text-muted">Telefono del afiliado, solo se admiten numeros</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_telefono1">Telefono opcional 1:</label>
+          <input class="form-control" id="id_telefono1" name="telefono1" placeholder="Telefono" type="number">
+
+            <small class="form-text text-muted">Telefono del afiliado, solo se admiten numeros</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_telefono2">Telefono opcional 2:</label>
+          <input class="form-control" id="id_telefono2" name="telefono2" placeholder="Telefono" type="number">
+
+            <small class="form-text text-muted">Telefono del afiliado, solo se admiten numeros</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_email">Correo electrónico:</label>
+          <input class="form-control" id="id_email" name="email" placeholder="ej: ejemplo@site.com" type="email" required="">
+
+            <small class="form-text text-muted">Email del afiliado, ej: user@mail.com</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_profesion">Profesion:</label>
+          <select class="form-control" id="id_profesion" name="profesion" required="">
+        <option value="" selected="selected">--Profesion--</option>
+        <option value="1">consuctor</option>
+        <option value="2">zapatero</option>
+        <option value="3">taxista</option>
+        <option value="4">ingeniero aerocivil</option>
+        <option value="6">master chef</option>
+        </select>
+          <small class="form-text text-muted">Profesion del afiliado</small>
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_sexo">Sexo:</label>
+          <select class="form-control" id="id_sexo" name="sexo" required="">
+        <option value="" selected="selected">--Sexo--</option>
+        <option value="m">Masculino</option>
+        <option value="f">Femenino</option>
+        </select>
+
+            <small class="form-text text-muted">Sexo del afiliado</small>
+
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="id_plan">Plan:</label>
+          <select class="form-control" id="id_plan" name="plan" required="">
+        <option value="" selected="selected">--Plan--</option>
+        <option value="1">Hogar</option>
+        <option value="2">Amigos</option>
+        <option value="3">prueba</option>
+        <option value="4">calotin</option>
+        <option value="5">espreamer</option>
+        </select>
+
+            <small class="form-text text-muted">Plan del afiliado</small>
+
+        </div>
+
+        <div class="form-check col-sm-2">
+          <label class="form-check-label"><input checked="checked" class="form-check-input" id="id_estado" name="estado" type="checkbox">Estado</label>
+
+            <small class="form-text text-muted">activo/inactivo</small>
+
+        </div>
+
+        <fieldset class="form-group col-sm-12 form-address-add-fieldset">
+    <legend>Direccion</legend>
+    <input class="form-control" id="id_direccion" name="direccion" placeholder="Direccion" readonly="readonly" type="text" required="">
+
+      <small class="form-text text-muted">Direccion del afiliado</small>
+
+
+    <div class="row ctn-address">
+      <div class="form-group col-sm-2">
+        <select name="tipoVia" id="tipoVia" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="au">autopista</option>
+          <option value="av">avenida</option>
+          <option value="ac">avenida calle</option>
+          <option value="ak">avenida carrera</option>
+          <option value="bl">bulevar</option>
+          <option value="cl">calle</option>
+          <option value="kr">carrera</option>
+          <option value="ct">carretera</option>
+          <option value="cr">carretera central</option>
+          <option value="cq">circular</option>
+          <option value="cv">circunvalar</option>
+          <option value="cc">cuentas corridas</option>
+          <option value="dg">diagonal</option>
+          <option value="pj">pasaje</option>
+          <option value="ps">paseo</option>
+          <option value="pt">peatonal</option>
+          <option value="tv">transversal</option>
+          <option value="tc">troncal</option>
+          <option value="vt">variante</option>
+          <option value="vi">via</option>
+        </select>
+        <small class="form-text text-muted">calle, carrera, avenida, etc</small>
+      </div>
+
+      <div class="form-group col-sm-2">
+        <select name="viaPrincipal" id="viaPrincipal" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="caracas">caracas</option>
+          <option value="boyaca">boyaca</option>
+          <option value="cali">cali</option>
+          <option value="el dorado">el dorado</option>
+          <option value="jimenez">jimenez</option>
+          <option value="las americas">las americas</option>
+        </select>
+        <small class="form-text text-muted">caracas, boyaca, cali, etc</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <input type="number" class="form-control" name="numeroViaPrincipal" id="numeroViaPrincipal" size="3">
+        <small class="form-text text-muted">Numero via principal</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="letraViaPrincipal" id="letraViaPrincipal" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+        </select>
+        <small class="form-text text-muted">Letra via principal</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="prefijoBisPrin" id="prefijoBisPrin" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="bis">bis</option>
+        </select>
+        <small class="form-text text-muted">Prefijo bis via principal</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="letraPrefijoBisViaPrin" id="letraPrefijoBisViaPrin" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+        </select>
+        <small class="form-text text-muted">Letra prefijo bis via principal</small>
+      </div>
+
+      <div class="form-group col-sm-2">
+        <select name="cuadranteViaPrin" id="cuadranteViaPrin" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="este">este</option>
+          <option value="norte">norte</option>
+          <option value="oeste">oeste</option>
+          <option value="sur">sur</option>
+        </select>
+        <small class="form-text text-muted">Cuadrante via principal</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <input type="number" class="form-control" name="numeroViaGen" id="numeroViaGen" size="3">
+        <small class="form-text text-muted">Numero via generadora</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="letraViaGen" id="letraViaGen" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+        </select>
+        <small class="form-text text-muted">Letra via principal generadora</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="sufijoBisGen" id="sufijoBisGen" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="bis">bis</option>
+        </select>
+        <small class="form-text text-muted">Prefijo bis via generadora</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <select name="letraSufijoBisViaGen" id="letraSufijoBisViaGen" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+        </select>
+        <small class="form-text text-muted">Letra prefijo bis via generadora</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <input type="number" class="form-control" name="numeroPlaca" id="numeroPlaca" size="3">
+        <small class="form-text text-muted">Numero de placa</small>
+      </div>
+
+      <div class="form-group col-sm-2">
+        <select name="cuadranteNumeroPlaca" id="cuadranteNumeroPlaca" class="form-control">
+          <option value="-" selected="">-</option>
+          <option value="este">este</option>
+          <option value="norte">norte</option>
+          <option value="oeste">oeste</option>
+          <option value="sur">sur</option>
+        </select>
+        <small class="form-text text-muted">Cuadrante numero de placa</small>
+      </div>
+
+      <div class="form-group col-sm-1">
+        <button type="button" id="limpiar_direccion" class="btn btn-primary btn-sie">Limpiar</button>
+      </div>
+    </div>
+  </fieldset>
+
+
+        <div class="form-group col-sm-12">
+          <button type="submit" class="btn btn-primary btn-sie">Guardar</button>
+        </div>
+      </form>
+
+
+          </main>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/dist/js/scripts.js"></script>
+
+</body>
+
+</html>

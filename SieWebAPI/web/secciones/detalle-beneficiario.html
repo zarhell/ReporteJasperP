@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mark alvis suarez</title>
+  <link rel="stylesheet" href="../assets/dist/css/styles.css" media="screen" charset="utf-8">
+  <link rel="shortcut icon" href="../assets/dist/img/favicon.png" />
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row main-wrapper">
+
+      <header class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-dark justify-content-between">
+        <a href="#" class="hambuger-menu"><i class="large fa fa-2 fa-bars"></i></a>
+        <a href="home.html" class="navbar-brand sie-home"><span>Sie</span></a>
+
+        <div class="user-menu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <span class="username text-right">Pruebas</span>
+ </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="#">Notificaciones</a>
+            <a class="dropdown-item" href="#">Configuracion</a>
+            <div class="dropdown-divider"></div>
+            <a href="../index.html" class="dropdown-item button cerrar-sesion">
+ <i class="large fa fa-sign-out"></i>
+ <span>Cerrar sesion</span>
+ </a>
+          </div>
+        </div>
+
+      </header>
+
+      <aside class="sidebar col-sm-2 bg-dark d-none d-lg-block">
+        <nav class="main-menu">
+          <ul class="menu vertical">
+            <li>
+              <a href="#" class="parent">
+   <i class="large fa fa-user-circle"></i>
+   <span>Gestion de afiliados</span>
+   <i class="fa arrow float-right" aria-hidden="true"></i>
+   </a>
+              <ul class="submenu second-level collapse">
+                <li>
+                  <a href class="parent">Afiliados<i class="fa arrow float-right" aria-hidden="true"></i></a>
+                  <ul class="submenu third-level collapse">
+                    <li>
+                      <a href="afiliados.html" class="is-active">
+   <i class="large"></i>
+   <span>Todos los Afiliados</span>
+   </a>
+                    </li>
+                    <li>
+                      <a href="agregar-afiliado.html" class="is-active">
+   <i class="large"></i>
+   <span>Agregar Afiliados</span>
+   </a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content-wrapper offset-lg-2 col-lg-10">
+        <div class="row titular-info">
+          <div class="col-sm-12">
+            <div class="card titular-card">
+              <h3 class="card-header">Natalia burgos</h3>
+              <div class="card-body">
+                <div class="info row">
+                  <div class="fecha-nacimiento col-sm-6">
+                    <label class="font-weight-bold text-muted">Fecha de nacimiento: </label>
+                    <span class="card-text">1997-02-26</span>
+                  </div>
+                  <div class="email col-sm-6">
+                    <label class="font-weight-bold text-muted">Email: </label>
+                    <span class="card-text">nataliaburgos@gmail.com</span>
+                  </div>
+                  <div class="telefono col-sm-6">
+                    <label class="font-weight-bold text-muted">Telefono: </label>
+                    <span class="card-text">3145897896</span>
+                  </div>
+                  <div class="direccion col-sm-6">
+                    <label class="font-weight-bold text-muted">Direccion: </label>
+                    <span class="card-text">cl 11 sur # 12 - 29</span>
+                  </div>
+                  <div class="plan col-sm-6">
+                    <label class="font-weight-bold text-muted">Plan: </label>
+                    <span class="card-text"><a href="/plan/detalle/1/">hogar</a></span>
+                  </div>
+                  <div class="estado col-sm-6">
+                    <label class="font-weight-bold text-muted">Estado: </label>
+
+                      <span class="card-text">Activo</span>
+
+                  </div>
+                </div>
+                <div class="actions">
+                  <a href="editar-afiliado.html" class="btn btn-primary">Editar</a>
+                  <a href="#" class="btn btn-primary btn-sie" data-toggle="modal" data-target="#deleteAfiliadoModal">Eliminar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal to delete the afiliado -->
+        <div class="modal fade" id="deleteAfiliadoModal" tabindex="-1" role="dialog" aria-labelledby="deleteAfiliadoModalLabel" aria-hidden="true">
+          <form method="post" action="afiliados.html">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Elimiar afiliado</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Desea eliminar el afiliado Natalia burgos?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary btn-sie">Si</button>
+                  <button type="button" class="btn btn-primary btn-sie" data-dismiss="modal">No</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/dist/js/scripts.js"></script>
+
+</body>
+
+</html>
